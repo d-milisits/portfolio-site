@@ -17,18 +17,27 @@ function hideModal() {
   var modal = document.getElementsByClassName('modal')[0];
   modal.style.bottom = "-300px";
 }
+
+// Function to copy email to clipboard.
+function copyToClipboard(val){
+  var dummy = document.createElement("input");
+  // dummy.style.display = 'none';
+  document.body.appendChild(dummy);
+
+  dummy.setAttribute("id", "dummy_id");
+  document.getElementById("dummy_id").value=val;
+  dummy.select();
+  document.execCommand("copy");
+  document.body.removeChild(dummy);
+}
+
 function showModal() {
+  // Displays modal
   var modal = document.getElementsByClassName('modal')[0];
   modal.style.bottom = "20px";
+  copyToClipboard('daniel.milisits@outlook.com');
+  // Hides modal
   setTimeout(()=>{
     hideModal();
   }, 2500);
-}
-
-// Remove animated classname from image at certain width.
-if (screen.width < 1000) {
-  var image = document.getElementById('img');
-  image.classList.remove('animate__animated animate__fadeIn');
-  image.className = '';
-  console.log('haha');
 }
