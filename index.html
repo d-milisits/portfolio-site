@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Daniel Milisits | Frontend Developer</title>
+    <script src="app.js"></script>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="./styles/index.css">
+    <link rel="stylesheet" type="text/css" href="./styles/navbar.css">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/footer.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script>
+      // Hack for mobile device 100% VH --  ignores address bars.
+      let vh = window.innerHeight * 0.01;
+      document.documentElement.style.setProperty('--vh', `${vh}px`);
+
+      window.addEventListener('resize', () => {
+        let vh = window.innerHeight * 0.01;
+        document.documentElement.style.setProperty('--vh', `${vh}px`);
+      });
+    </script>
+  </head>
+    <body>
+
+      <!-- EMAIL MODAL START -->
+      <div class="modal">
+        <div class="content">
+          <p id="thanks">THANKS!</p>
+          <p id="email">My email address has been copied to your clipboard.</p>
+        </div>
+      </div>
+      <!-- EMAIL MODAL END -->
+
+      <!-- NAVBAR START -->
+      <div id="navbar">
+        <div class="nav-content">
+          <i class="fa fa-times-circle" id="x" aria-hidden="true" onclick="show()"></i>
+          <p class="navigation">NAVIGATION</p>
+          <div class="nav-option">
+            <p class="option"><a href="https://github.com/d-milisits" target="_blank">GitHub</a></p>
+            <i class="fa fa-github" aria-hidden="true"></i>
+          </div>
+          <div class="nav-option">
+            <p class="option"><a href="https://www.linkedin.com/in/daniel-milisits/" target="_blank">LinkedIn</a></p>
+            <i class="fa fa-linkedin-square" aria-hidden="true"></i>
+          </div>
+          <div class="nav-option">
+            <p class="option"><a href="https://www.youtube.com/channel/UC8t-EcEO0Yur8tNWPtNJ_yg?" target="_blank">YouTube</a></p>
+            <i class="fa fa-youtube-play" aria-hidden="true"></i>
+          </div>
+          <div class="nav-option">
+            <p class="option"><a href="./DanielMilisitsResume.pdf" target="_blank">Resume</a></p>
+            <i class="fa fa-file-text-o" aria-hidden="true"></i>
+          </div>
+        </div>
+      </div>
+      <!-- NAVBAR END -->
+
+      <!-- MAIN LANDING BOX START -->
+      <div class="main" id="main">
+        <div class="back-text animate__animated animate__fadeIn">
+          <h1>developer.</h1>
+        </div>
+        <p class="mobile-logo">DM</p>
+        <div class="main-intro">
+          <p class="name animate__animated animate__fadeInUp">DANIEL MILISITS</p>
+          <h1 class="animate__animated animate__fadeInUp">B.S. Finance &<br>Fullstack Developer</h1>
+          <p class="para animate__animated animate__fadeInUp">One of my greatest passions is creating beautiful UI/UX for people to enjoy. While my focus is primarily shifted towards front-end development, I consider myself versatile in all areas of programming.</p>
+          <p class="cta animate__animated animate__fadeInUp"><span class="left" onclick="show()">Helpful Links</span>||<span class="middle" onclick="document.getElementById('outer').scrollIntoView();">View My Work</span>||<span class="right" onclick="showModal()">Contact Me</span></p>
+        </div>
+        <div class="main-img" >
+          <img class="animate__animated animate__fadeIn" src="img/self.jpeg" id="img"/>
+        </div>
+        <div class="mobile-img">
+          <img class="animate__animated animate__fadeIn" src="img/mobile-img.png"/>
+        </div>
+        <i class="fa fa-bars" aria-hidden="true" onclick="show()"></i>
+        <i class="fa fa-angle-double-down animate__animated animate__fadeInUp" aria-hidden="true"></i>
+      </div>
+      <!-- MAIN LANDING BOX END -->
+
+      <!-- TEXT INTRO START -->
+      <div class="text-intro" id="text-intro">
+        <h1 data-aos="flip-up" data-aos-delay="125" data-aos-duration="750">STRIKING</h1>
+        <p>FRONT-END DEVELOPMENT.</p>
+        <hr>
+        <h1 data-aos="flip-up" data-aos-delay="250" data-aos-duration="750">EFFICIENT</h1>
+        <p>BACK-END DEVELOPMENT.</p>
+      </div>
+      <div class="pattern">
+        <i class="fa fa-angle-double-down" aria-hidden="true"></i>
+      </div>
+      <!-- TEXT INTRO END -->
+
+      <!-- STACK START -->
+      <div class="about">
+        <div class="about-left" id="stack">
+          <div class="intro">
+            <p>PROFICIENCY</p>
+            <h1>TECH STACK</h1>
+          </div>
+          <div data-aos="fade-up" data-aos-delay="200">
+            <div class="bar-div">
+              <p>React.js</p>
+              <div class="bar">
+                <div class="progress react"></div>
+              </div>
+            </div>
+            <div class="bar-div">
+              <p>HTML</p>
+              <div class="bar">
+                <div class="progress html"></div>
+              </div>
+            </div>
+            <div class="bar-div">
+              <p>CSS</p>
+              <div class="bar">
+                <div class="progress css"></div>
+              </div>
+            </div>
+            <div class="bar-div">
+              <p>JavaScript</p>
+              <div class="bar">
+                <div class="progress js"></div>
+              </div>
+            </div>
+            <div class="bar-div">
+              <p>Python3</p>
+              <div class="bar">
+                <div class="progress python"></div>
+              </div>
+            </div>
+            <div class="bar-div">
+              <p>Flutter | Dart</p>
+              <div class="bar">
+                <div class="progress flutter"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- STACK END -->
+
+      <!-- PROJECTS START -->
+      <div class="intro outer" id="outer">
+        <p>SOME</p>
+        <h1>PROJECTS</h1>
+      </div>
+      <div class="projects" id="projects">
+        <div class="project" data-aos="fade-up" data-aos-delay="100">
+          <div class="project-title">
+            <h1><span class="highlight">react-news</span></h1>
+            <i class="fa fa-newspaper-o" aria-hidden="true"></i>
+          </div>
+          <div class="row">
+            <p class="left-text" id="hom">DESCRIPTION</p>
+            <p class="right-text">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.</p>
+          </div>
+          <div class="row">
+            <p class="left-text">PROJECT TYPE</p>
+            <p class="right-text">PERSONAL</p>
+          </div>
+          <div class="project-cta">
+            <div class="cta-col">
+              <i class="fa fa-desktop" aria-hidden="true"></i>
+              <p>VIEW</p>
+            </div>
+            <div class="cta-col">
+              <i class="fa fa-github" aria-hidden="true"></i>
+              <p>CODE</p>
+            </div>
+          </div>
+        </div>
+        <div class="project" data-aos="fade-up" data-aos-delay="100">
+          <div class="project-title">
+            <h1><span class="highlight">FL floor plans</span></h1>
+            <i class="fa fa-home" aria-hidden="true"></i>
+          </div>
+          <div class="row">
+            <p class="left-text" id="hom">DESCRIPTION</p>
+            <p class="right-text">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.</p>
+          </div>
+          <div class="row">
+            <p class="left-text">PROJECT TYPE</p>
+            <p class="right-text">FREELANCE</p>
+          </div>
+          <div class="project-cta">
+            <div class="cta-col">
+              <a href="http://www.flfloorplans.com/" target="_blank"><i class="fa fa-desktop" aria-hidden="true"></i></a>
+              <p>VIEW</p>
+            </div>
+            <div class="cta-col">
+              <a href="https://github.com/d-milisits/fl-floor-plans" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a>
+              <p>CODE</p>
+            </div>
+          </div>
+        </div>
+        <div class="project" data-aos="fade-up" data-aos-delay="100">
+          <div class="project-title">
+            <h1><span class="highlight">Photos by JG</span></h1>
+            <i class="fa fa-camera-retro" aria-hidden="true"></i>
+          </div>
+          <div class="row">
+            <p class="left-text" id="hom">DESCRIPTION</p>
+            <p class="right-text">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.</p>
+          </div>
+          <div class="row">
+            <p class="left-text">PROJECT TYPE</p>
+            <p class="right-text">FREELANCE</p>
+          </div>
+          <div class="project-cta">
+            <div class="cta-col">
+              <i class="fa fa-desktop" aria-hidden="true"></i>
+              <p>VIEW</p>
+            </div>
+            <div class="cta-col">
+              <i class="fa fa-github" aria-hidden="true"></i>
+              <p>CODE</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- PROJECTS END -->
+
+      <!-- FOOTER START -->
+      <div class="pattern"></div>
+      <div class="footer" data-aos="fade-down">
+        <h1>OOPS!</h1>
+        <p>YOU HAVE REACHED THE END OF MY SITE.</p>
+        <i class="fa fa-arrow-circle-up" aria-hidden="true" onclick="document.getElementById('main').scrollIntoView();"></i>
+      </div>
+      <!-- FOOTER END -->
+
+    </body>
+  <script>AOS.init({offset:200, duration: 700,});</script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+</html>
