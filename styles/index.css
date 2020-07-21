@@ -34,11 +34,11 @@ html {
   position: absolute;
   top:3%;
   left: 2%;
-  font-weight: 700;
-  font-size: 1.1rem;
-  border: 2.5px solid #2f3542;
-  padding: 5px;
-  border-radius: 100px;
+  font-weight: 400;
+  font-size: 1.05rem;
+  border: 1.45px solid #2f3542;
+  padding: 4px;
+  border-radius: 100%;
   display:none;
 }
 
