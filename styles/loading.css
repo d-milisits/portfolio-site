@@ -34,6 +34,7 @@
   background: #e1b12c;
   position: absolute;
   animation: mainBlock 1s cubic-bezier(.74, .06, .4, .92) forwards;
+  animation-delay: .5s;
   display: flex;
 }
 
@@ -43,7 +44,7 @@
   -webkit-animation: mainFadeIn 2s forwards;
   -o-animation: mainFadeIn 2s forwards;
   animation: mainFadeIn 2s forwards;
-  animation-delay: .8s;
+  animation-delay: 1.3s;
   opacity: 0;
   display: flex;
   align-items: baseline;
@@ -80,13 +81,13 @@
   background: #e1b12c;
   position: absolute;
   animation: secBlock 1s cubic-bezier(.74, .06, .4, .92) forwards;
-  animation-delay: 1s;
+  animation-delay: 1.5s;
   display: flex;
 }
 
 .box .role p {
   animation: secFadeIn 2s forwards;
-  animation-delay: 1.7s;
+  animation-delay: 2.2s;
   opacity: 0;
     font-weight: 400;
   color: #2f3542;

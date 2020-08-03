@@ -22,8 +22,8 @@ function loadSite() {
     setTimeout(()=>{
       loader.style.display = 'none';
       document.body.style.maxHeight = 'none';
-    }, 825);
-  }, 2700);
+    }, 850);
+  }, 2850);
 }
 
 // Function to toggle modal (used for email only).
