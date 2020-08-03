@@ -12,6 +12,20 @@ function show() {
   }
 }
 
+// Function to pop loading screen
+function loadSite() {
+  // Removes ability to scroll & pops loading screen after x seconds. Resumes ability to scroll once complete.
+  var loader = document.getElementById('container');
+  document.body.style.maxHeight = '100vh';
+  setTimeout(()=>{
+    loader.className +=' animate__animated animate__fadeOut';
+    setTimeout(()=>{
+      loader.style.display = 'none';
+      document.body.style.maxHeight = 'none';
+    }, 825);
+  }, 2700);
+}
+
 // Function to toggle modal (used for email only).
 function hideModal() {
   var modal = document.getElementsByClassName('modal')[0];

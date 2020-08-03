@@ -6,6 +6,7 @@
     <meta charset="UTF-8">
     <link rel="icon" href="./img/tablogo.PNG">
     <link rel="stylesheet" type="text/css" href="./styles/index.css">
+    <link rel="stylesheet" type="text/css" href="./styles/loading.css">
     <link rel="stylesheet" type="text/css" href="./styles/navbar.css">
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
@@ -26,7 +27,25 @@
       });
     </script>
   </head>
-    <body>
+    <body onload="loadSite()">
+
+      <!-- LOADING SCREEN START -->
+      <div class="container" id="container">
+        <div class="box">
+    
+            <div class="title">
+                <span class="block"></span>
+                <h1>Daniel Milisits<span class="dot"></span></h1>
+            </div>
+    
+            <div class="role">
+                <div class="block"></div>
+                <p>Frontend Developer</p>
+            </div>
+    
+        </div>
+      </div>
+      <!-- LOADING SCREEN END -->
 
       <!-- EMAIL MODAL START -->
       <div class="modal">
@@ -45,6 +64,10 @@
           <div class="nav-option">
             <p class="option"><a href="https://github.com/d-milisits" target="_blank">GitHub</a></p>
             <i class="fa fa-github" aria-hidden="true"></i>
+          </div>
+          <div class="nav-option">
+            <p class="option"><a href="https://codepen.io/d-milisits/pens/public" target="_blank">CodePen</a></p>
+            <i class="fa fa-codepen" aria-hidden="true"></i>
           </div>
           <div class="nav-option">
             <p class="option"><a href="https://www.linkedin.com/in/daniel-milisits/" target="_blank">LinkedIn</a></p>
@@ -70,8 +93,8 @@
         <p class="mobile-logo">DM</p>
         <div class="main-intro">
           <p class="name animate__animated animate__fadeInUp">DANIEL MILISITS</p>
-          <h1 class="animate__animated animate__fadeInUp">UI/UX oriented<br>Frontend Developer</h1>
-          <p class="para animate__animated animate__fadeInUp">One of my greatest passions is creating beautiful UI/UX for people to enjoy. While my focus is primarily shifted towards front-end development, I consider myself versatile in all areas of programming.</p>
+          <h1 class="animate__animated animate__fadeInUp">Frontend Focused<br>Fullstack Developer</h1>
+          <p class="para animate__animated animate__fadeInUp">One of my greatest passions is creating beautiful UI/UX for people to enjoy. While my focus is primarily shifted towards front-end development, I consider myself well-versed in back-end programming as well.</p>
           <p class="cta animate__animated animate__fadeInUp"><span class="left" onclick="show()">Helpful Links</span>||<span class="middle" onclick="document.getElementById('outer').scrollIntoView();">View My Work</span>||<span class="right" data-clipboard-text="daniel.milisits@outlook.com" onclick="showModal()">Contact Me</span></p>
         </div>
         <div class="main-img" >
@@ -80,7 +103,7 @@
         <div class="mobile-img">
           <img class="animate__animated animate__fadeIn" src="img/mobile-img.png"/>
         </div>
-        <i class="fa fa-bars" aria-hidden="true" onclick="show()"></i>
+        <i class="fa fa-bars animate__animated animate__fadeIn" aria-hidden="true" onclick="show()"></i>
         <i class="fa fa-angle-double-down animate__animated animate__fadeInUp" aria-hidden="true"></i>
       </div>
       <!-- MAIN LANDING BOX END -->
@@ -119,13 +142,19 @@
               </div>
             </div>
             <div class="bar-div">
-              <p>CSS</p>
+              <p>CSS & SASS</p>
               <div class="bar">
                 <div class="progress css"></div>
               </div>
             </div>
             <div class="bar-div">
-              <p>JavaScript</p>
+              <p>JavaScript & jQuery</p>
+              <div class="bar">
+                <div class="progress js"></div>
+              </div>
+            </div>
+            <div class="bar-div">
+              <p>GIT</p>
               <div class="bar">
                 <div class="progress js"></div>
               </div>
@@ -137,7 +166,7 @@
               </div>
             </div>
             <div class="bar-div">
-              <p>Flutter | Dart</p>
+              <p>Flutter & Dart</p>
               <div class="bar">
                 <div class="progress flutter"></div>
               </div>
@@ -152,6 +181,9 @@
         <p>SOME</p>
         <h1>PROJECTS</h1>
       </div>
+
+      <p class="note"><span>**  </span>PLEASE NOTE: My react applications are deployed on HEROKU and may take up to 10 seconds to boot.</p>
+
       <div class="projects" id="projects">
         <div class="project" data-aos="fade-up" data-aos-delay="100">
           <div class="project-title">
@@ -173,30 +205,6 @@
             </div>
             <div class="cta-col">
               <a href="https://github.com/d-milisits/react-news-app" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a>
-              <p>CODE</p>
-            </div>
-          </div>
-        </div>
-        <div class="project" data-aos="fade-up" data-aos-delay="100">
-          <div class="project-title">
-            <h1><span class="highlight">AACTIV</span></h1>
-            <i class="fa fa-newspaper-o" aria-hidden="true"></i>
-          </div>
-          <div class="row">
-            <p class="left-text" id="hom">DESCRIPTION</p>
-            <p class="right-text">A true fullstack application. Web scraped for extensive workout information and allowed users to create an account, generate workouts tailored to their preferences, whilst being able to save & manage favorites to the database.</p>
-          </div>
-          <div class="row">
-            <p class="left-text">PROJECT TYPE</p>
-            <p class="right-text">PERSONAL</p>
-          </div>
-          <div class="project-cta">
-            <div class="cta-col">
-              <a href="https://youtu.be/xnNbXMzI8jw" target="_blank"><i class="fa fa-desktop" aria-hidden="true"></i></a>
-              <p>VIEW</p>
-            </div>
-            <div class="cta-col">
-              <a href="https://github.com/d-milisits/aactiv" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a>
               <p>CODE</p>
             </div>
           </div>
@@ -227,12 +235,36 @@
         </div>
         <div class="project" data-aos="fade-up" data-aos-delay="100">
           <div class="project-title">
+            <h1><span class="highlight">AACTIV</span></h1>
+            <i class="fa fa-bicycle" aria-hidden="true"></i>
+          </div>
+          <div class="row">
+            <p class="left-text" id="hom">DESCRIPTION</p>
+            <p class="right-text">A true fullstack application. Scraped the web for extensive workout information and allowed users to create an account, generate workouts tailored to their preferences, whilst being able to save & manage favorites to a SQLite database.</p>
+          </div>
+          <div class="row">
+            <p class="left-text">PROJECT TYPE</p>
+            <p class="right-text">PERSONAL</p>
+          </div>
+          <div class="project-cta">
+            <div class="cta-col">
+              <a href="https://youtu.be/xnNbXMzI8jw" target="_blank"><i class="fa fa-youtube" aria-hidden="true"></i></a>
+              <p>VIEW</p>
+            </div>
+            <div class="cta-col">
+              <a href="https://github.com/d-milisits/aactiv" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a>
+              <p>CODE</p>
+            </div>
+          </div>
+        </div>
+        <div class="project" data-aos="fade-up" data-aos-delay="100">
+          <div class="project-title">
             <h1><span class="highlight">Photos by JG</span></h1>
             <i class="fa fa-camera-retro" aria-hidden="true"></i>
           </div>
           <div class="row">
             <p class="left-text" id="hom">DESCRIPTION</p>
-            <p class="right-text">My most recent freelance project, CURRENTLY IN PRODUCTION. Utilized modern web-design practices and white space for a clean, modern showcase of a very talented photographer's work.</p>
+            <p class="right-text">**CURRENTLY IN PRODUCTION** My most recent freelance project. Utilized modern web-design practices, white space & CSS Grid for a clean, modern showcase of a very talented photographer's work.</p>
           </div>
           <div class="row">
             <p class="left-text">PROJECT TYPE</p>

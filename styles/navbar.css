@@ -30,7 +30,7 @@
   right: 3%;
   top: 3%;
   color: #f1f2f6;
-  transition: .25s color ease;
+  transition: .175s color ease;
   cursor: pointer;
 }
 .nav-content #x:hover {
@@ -58,8 +58,12 @@
   margin-left: 15px;
   color: #7f8fa6;
 }
-.nav-content .option:hover {
-  color: #7f8fa6;
+.nav-content p:hover {
+  color: #cbdaf1;
+  transition: .2s color ease;
+}
+.nav-content p:hover ~ i {
+  color: #e1b12c;
   cursor: pointer;
   transition: .2s color ease;
 }
