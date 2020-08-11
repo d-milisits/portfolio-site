@@ -132,7 +132,7 @@ html {
   font-weight: 800;
   font-size: 4.45rem;
   line-height: 92.5%;
-  animation-delay: 4.7s;
+  animation-delay: 4.55s;
   animation-duration: .5s;
 }
 .main-intro .para {
@@ -143,12 +143,12 @@ html {
   font-size: 1.25rem;
   letter-spacing: 0;
   margin-bottom: 25px;
-  animation-delay: 4.95s;
+  animation-delay: 4.8s;
   animation-duration: .5s;
 }
 .main-intro .cta {
   font-size: 1.1rem;
-  animation-delay: 5.2s;
+  animation-delay: 5.05s;
   animation-duration: .5s;
 }
 .cta .left {
@@ -166,7 +166,6 @@ html {
   transition: .25s all ease;
 }
 .main-intro .cta span:hover {
-  color: #e1b12c;
   text-decoration: underline;
 }
 .main-img {
@@ -180,7 +179,7 @@ html {
   bottom:0;
   right:10%;
   z-index: 1000;
-  animation-delay: 4.1s;
+  animation-delay: 3.95s;
   /* opacity: .85; */
 }
 .main .fa:hover {
@@ -194,7 +193,7 @@ html {
   left: 50%;
   top: 92.5%;
   transform: translate(-50%, -50%);
-  animation-delay: 5.35s;
+  animation-delay: 5.2s;
   animation-duration: .5s;
   color: #e1b12c;
 }
@@ -204,7 +203,7 @@ html {
   right: 3%;
   top: 3%;
   z-index:1100;
-  animation-delay: 5.35s;
+  animation-delay: 5.65s;
   animation-duration: .5s;
 }
 /* MAIN STYLING END */
@@ -362,98 +361,120 @@ html {
 .projects {
   width:100%;
   display:flex;
-  flex-direction: column;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: center;
   transition: all 0.5s ease;
   /* margin-left: 6%; */
 }
-.project {
-  margin-bottom: 50px;
-  padding: 35px 50px 35px 50px;
-  border-top-right-radius: 15px;
-  border-bottom-right-radius: 15px;
-  width: 82%;
-  box-shadow: 0 19px 38px rgba(92, 92, 92, 0.25), 0 15px 12px rgba(63, 63, 63, 0.17);
+/* CARD */
+.projects .site {
+  height: auto;
+  width:590px;
   position: relative;
-}
-.project .project-title {
-  display:flex;
-  align-items: center;
-}
-.project h1 {
-  font-size: 2.9rem;
-  color: #2f3542;
-  position:relative;
-  display:inline-block;
-  font-weight:800;
-  letter-spacing:-1px;
-}
-.project .project-title i {
-  margin-left: 25px;
-  font-size: 2.25rem;
-  color: #7f8fa6;
-}
-.project h1:before {
-  content:"";
-  position:absolute;
-  width:100%;
-  height:100%;
-  left:0;
-  top:0;
-  z-index:-1;
-  opacity:0.25;
-  background-image: url("../img/stroke.png");
-  background-size: 100% 90%;
-  background-repeat: no-repeat;
-  background-position: center;
-}
-.project .row {
-  display:flex;
-  margin-top: 32.5px;
-}
-.project .row .left-text {
-  color: #7f8fa6;
-  font-size: 1.25rem;
-  font-weight: 800;
-}
-.project .row .right-text {
-  color: #7f8fa6;
-  margin-left: 80px;
-  width: 60%;
-  font-size: 1.15rem;
-  font-weight:300;
-}
-.project .project-cta {
-  position:absolute;
-  right:0;
-  top:0;
-  height:100%;
-  width: 125px;
-  background-color: #2f3542;
-  border-top-right-radius: 15px;
-  border-bottom-right-radius: 15px;
-  display:flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-evenly;
-}
-.project .project-cta i {
-  font-size: 2.25rem;
-  margin-bottom: 10px;
-  color: #7f8fa6;
   cursor: pointer;
-  transition: .25s color ease;
+  margin: 50px;
 }
-.project .project-cta i:hover {
+.projects .site img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+.projects .site .title {
+  position: absolute;
+  top: -55px;
+  left: -20px;
+  padding: 15px 22.5px;
+  /* background-color: #2f3542; */
+  color: #2f3542;
+  font-weight: 300;
+  z-index: 300;
+  display:flex;
+  font-size: 1.35rem;
+}
+.projects .site .title i {
+  color: #171a20;
+  font-size: 1.35rem;
+  margin-left: 15px;
+  transition: .2s color ease;
+}
+.projects .site .title .fa-github {
+  font-size: 1.65rem;
+}
+.projects .site .title i:hover {
   color: #e1b12c;
 }
-.project .project-cta .cta-col {
-  text-align: center;
-  color: #f1f2f6;
-  font-weight: 600;
-  cursor: pointer;
-  z-index: 4;
+/* FOR DISABLED PROJECT VIEWS */
+#disabled, #disabled:hover {
+  color: gray;
+}
+/* OVERLAY */
+.projects .site .overlay::after {
+  content:"";
+  display: inline-block;
+  position:absolute;
+  background-color: #171a20;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  z-index:100;
+  opacity: 0;
+  transition: .2s opacity;
+}
+.projects .site:hover .overlay::after {
+  opacity: .97;
+}
+.projects .site:hover .title p {
+  transition: .375s color ease;
+  color: #e1b12c;
+}
+/* TEXT */
+.projects .site .text {
+  position: absolute;
+  top:12.5%;
+  left:5%;
+  /* transform: translate(-50%,-50%); */
+  color: white;
+  z-index: 200;
+  opacity: 0;
+  transition: opacity .4s;
+  font-weight: 200;
+  width: 70%;
+  font-weight: 300;
+  font-size: 1.1rem;
+  /* animation: .45s fadeInUp .5s; */
+  /* animation-fill-mode: both; */
+}
+.projects .site .text span {
+  font-weight: 800;
+  color: #e1b12c;
+}
+.projects .site .text .stack {
+  letter-spacing: 1.5px;
+  margin-top: 60px;
+}
+
+@keyframes transitionIn {
+  0% {
+    opacity: 0;
+    transform: translateY(22px);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+
+@keyframes transitionOut {
+  0% {
+    opacity: 1;
+    transform: translate(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(22.5px);
+  }
 }
 /* PROJECT SECTION END */
 
@@ -495,6 +516,89 @@ html {
   letter-spacing: 0;
 }
 /* FOOTER END */
+
+/* SPECIFIC MEDIA QUERY FOR OLDER LAPTOPS */
+@media (max-height: 775px) and (min-width: 1301px) {
+  .main-intro {
+    left: 4%;
+  }
+  .main-intro h1 {
+    font-size: 3.35rem;
+  }
+  .main-intro .para {
+    font-size: 1.1rem;
+    width: 37.5%;
+  }
+  .main-intro .cta {
+    font-size: 1rem;
+  }
+  .text-intro h1 {
+    font-size: 4rem;
+  }
+  .text-intro p {
+    font-size: 1.25rem;
+  }
+  .text-intro hr {
+    width: 300px;
+  }
+  .intro p {
+    font-size: 1.15rem;
+  }
+  .intro h1 {
+    font-size: 2.75rem;
+  }
+  .bar {
+    width: 500px;
+    height: 14px;
+    margin-bottom: 14px;
+  }
+  .bar-div p {
+    letter-spacing:1.5px;
+  }
+  .project {
+    margin-bottom: 37.5px;
+  }
+  .project h1 {
+    font-size: 2.35rem;
+  }
+  .project .project-title i {
+    font-size: 2.35rem;
+  }
+  .project .row {
+    margin-top: 28px;
+  }
+  .project .row .left-text {
+    font-size: 1.05rem;
+  }
+  .project .row .right-text {
+    width: 65%;
+    font-size: 1.025rem;
+  }
+  .note {
+    font-size: 1.025rem;
+  }
+  .note span {
+    font-size: 1.2rem;
+  }
+  .project .project-cta {
+    width: 100px;
+  }
+  .project .project-cta i {
+    font-size: 1.9rem;
+  }
+  .project .project-cta p {
+    font-size: .9rem;
+  }
+  .footer h1 {
+    font-size: 4rem;
+  }
+  .footer p {
+    font-size: 1.05rem;
+  }
+  .footer i {
+    font-size: 2.8rem;
+  }
+}
 
 /* MEDIA QUERIES */
 @media (min-width: 1999px) {
@@ -547,17 +651,33 @@ html {
   .main .fa-bars {
     font-size: 2.65rem;
   }
-  .project .row .left-text {
-    font-size: 1.475rem;
-  }
-  .project .row .right-text {
-    font-size: 1.4rem;
-  }
   .note {
     font-size: 1.4rem;
   }
   .note span {
     font-size: 1.7rem;
+  }
+  .projects .site {
+    width:735px;
+    margin: 75px;
+  }
+  .projects .site .title {
+    top: -67px;
+    left: -30px;
+    padding: 17.5px 30px;
+    font-size: 2rem;
+  }
+  .projects .site .title i {
+    font-size: 1.7rem;
+    margin-left: 20px;
+  }
+  .projects .site .title .fa-github {
+    font-size: 1.95rem;
+  }
+  .projects .site .text {
+    left:5%;
+    width: 70%;
+    font-size: 1.4rem;
   }
 }
 @media (max-width: 1525px) {
@@ -797,6 +917,7 @@ html {
   .note {
     font-size: .96rem;
     margin: 8%;
+    margin-top: 4%;
   }
   .note span {
     font-size: 1.05rem;
@@ -830,14 +951,30 @@ html {
   .modal .content #email {
     font-size: .75rem;
   }
+  .projects .site {
+    width:485px;
+    margin: 45px;
+  }
+  .projects .site .title {
+    top: -50px;
+    left: -23px;
+    font-size: 1.35rem;
+  }
+  .projects .site .title i {
+    font-size: 1.45rem;
+    margin-left: 15px;
+  }
+  .projects .site .title .fa-github {
+    font-size: 1.64rem;
+  }
+  .projects .site .text {
+    top:12.5%;
+    left:5%;
+    width: 72%;
+    font-size: 1rem;
+  }
 }
-@media (max-width: 500px) {
-  .project {
-    padding-left: 20px;
-  }
-  .project .project-title i {
-    margin-left: 8px;
-  }
+@media (max-width: 550px) {
   .footer {
     width: 85%;
   }
@@ -853,15 +990,32 @@ html {
     height:.1px;
     width: 235px;
   }
-  .project .row #hom {
-    display:none;
+  .projects .site {
+    width:400px;
+    margin: 35px;
+    margin-bottom: 50px;
   }
-  .project .row .right-text {
-    width: 87.5%;
-    margin-left:0;
+  .projects .site .title {
+    top: -45px;
+    left: -23px;
+    font-size: 1.1rem;
   }
-  .project .row .left-text {
-    width: 165px;
+  .projects .site .title i {
+    font-size: 1.25rem;
+    margin-left: 11px;
+  }
+  .projects .site .title .fa-github {
+    font-size: 1.525rem;
+    margin-top: -3px;
+  }
+  .projects .site .text {
+    top:12.5%;
+    left:5%;
+    width: 80%;
+    font-size: .9rem;
+  }
+  .projects .site .text .stack {
+    margin-top: 20px;
   }
 }
 @media (max-width: 420px) {
@@ -924,29 +1078,11 @@ html {
     letter-spacing:1px;
     font-size: .85rem;
   }
-  .project h1 {
-    font-size: 1.5rem;
-  }
-  .project .project-title i {
-    font-size: 1.5rem;
-  }
-  .project .row .left-text {
-    font-size: .925rem;
-  }
-  .project .row .right-text {
-    font-size: .925rem;
-  }
   .note {
     font-size: .925rem;
   }
   .note span {
     font-size: 1rem;
-  }
-  .project .project-cta {
-    width: 60px;
-  }
-  .project .project-cta i {
-    font-size: 1.65rem;
   }
   .footer {
     width: 70%;
@@ -971,9 +1107,54 @@ html {
   .modal .content #email {
     font-size: .65rem;
   }
+  .projects .site {
+    width:315px;
+    margin: 27.5px;
+    margin-bottom: 37.5px;
+  }
+  .projects .site .title {
+    top: -45px;
+    left: -23px;
+    font-size: 1rem;
+    width: 100%;
+  }
+  .projects .site .title i {
+    font-size: 1.05rem;
+    margin-left: 12px;
+  }
+  .projects .site .title .fa-github {
+    font-size: 1.4rem;
+  }
+  .projects .site .text {
+    top:12%;
+    left:4.25%;
+    width: 85%;
+    font-size: .8rem;
+  }
 }
 @media (max-width: 376px) {
   .mobile-img img {
     right:-27%;
+  }
+  .projects .site {
+    width:285px;
+    margin: 25px;
+  }
+  .projects .site .title {
+    top: -39px;
+    font-size: .9rem;
+  }
+  .projects .site .title i {
+    font-size: .95rem;
+  }
+  .projects .site .title .fa-github {
+    font-size: 1.2rem;
+    margin-top: -2px;
+  }
+  .projects .site .text {
+    top:10%;
+    left:4%;
+    width: 87.5%;
+    font-size: .725rem;
   }
 }

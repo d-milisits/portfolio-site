@@ -26,6 +26,23 @@
         document.documentElement.style.setProperty('--vh', `${vh}px`);
       });
     </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- Animation for fading out main box on scroll -->
+    <script type="text/javascript">
+      $(function() {
+        var documentEl = $(document),
+          fadeElem = $('.main');
+        
+        documentEl.on('scroll', function() {
+          var currScrollPos = documentEl.scrollTop();
+          fadeElem.each(function() {
+            var $this = $(this),
+              elemOffsetTop = $this.offset().top;
+            if (currScrollPos > elemOffsetTop) $this.css('opacity', 1 - (currScrollPos-elemOffsetTop)/800);
+          });
+        });
+      });
+    </script>
   </head>
     <body onload="loadSite()">
 
@@ -110,7 +127,7 @@
 
       <!-- TEXT INTRO START -->
       <div class="text-intro" id="text-intro">
-        <h1>STRIKING</h1>
+        <h1>PROFICIENT</h1>
         <p>FRONT-END DEVELOPMENT.</p>
         <hr>
         <h1>EFFICIENT</h1>
@@ -184,109 +201,82 @@
 
       <p class="note"><span>**  </span>PLEASE NOTE: My react applications are deployed on HEROKU and may take up to 10 seconds to boot.</p>
 
-      <div class="projects" id="projects">
-        <div class="project" data-aos="fade-up" data-aos-delay="100">
-          <div class="project-title">
-            <h1><span class="highlight">react-news</span></h1>
-            <i class="fa fa-newspaper-o" aria-hidden="true"></i>
+      <div class="projects" id="projects" data-aos="fade-up" data-aos-delay="300">
+
+        <div class="site" id="card" onmouseover="fadein('news')" onmouseout="fadeout('news')">
+          <img src="./img/news.png">
+          <div class="title">
+            <p>REACT-NEWS</p>
+            <a href="https://react-news-dm.herokuapp.com/home" target="_blank"><i class="fa fa-desktop" aria-hidden="true"></i></a>
+            <a href="https://github.com/d-milisits/react-news-app" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a>
           </div>
-          <div class="row">
-            <p class="left-text" id="hom">DESCRIPTION</p>
-            <p class="right-text">React application that utilizes a public news API to fetch the most recent & trending categorical US news, updated daily. Very simple, yet very clean!</p>
-          </div>
-          <div class="row">
-            <p class="left-text">PROJECT TYPE</p>
-            <p class="right-text">PERSONAL</p>
-          </div>
-          <div class="project-cta">
-            <div class="cta-col">
-              <a href="https://react-news-dm.herokuapp.com/home" target="_blank"><i class="fa fa-desktop" aria-hidden="true"></i></a>
-              <p>VIEW</p>
-            </div>
-            <div class="cta-col">
-              <a href="https://github.com/d-milisits/react-news-app" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a>
-              <p>CODE</p>
-            </div>
+          <div class="overlay"></div>
+          <div class="text" id='news'>
+            <p>React.js app that allows users to read daily updated U.S. news by category. Modern, fun & easy to use.</p>
+            <p class="stack"><span>STACK</span></p>
+            <p class="stack-info">
+              React.js <span>||</span> CSS <span>||</span> Public U.S. news API
+            </p>
           </div>
         </div>
-        <div class="project" data-aos="fade-up" data-aos-delay="100">
-          <div class="project-title">
-            <h1><span class="highlight">FL floor plans</span></h1>
-            <i class="fa fa-home" aria-hidden="true"></i>
+
+        <div class="site" id="card" onmouseover="fadein('twitter')" onmouseout="fadeout('twitter')">
+          <img src="./img/twitter.PNG">
+          <div class="title">
+            <p>REACT-TWITTER-CLONE</p>
+            <a href="https://react-twitter-clone-917ea.web.app/" target="_blank"><i class="fa fa-desktop" aria-hidden="true"></i></a>
+            <a href="https://github.com/d-milisits/react-twitter-clone" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a>
           </div>
-          <div class="row">
-            <p class="left-text" id="hom">DESCRIPTION</p>
-            <p class="right-text">This project holds a special place in my heart, as it was my first freelance project as a web developer. Built & deployed with the purpose of showcasing floor planning services to customers in the state of Florida.</p>
-          </div>
-          <div class="row">
-            <p class="left-text">PROJECT TYPE</p>
-            <p class="right-text">FREELANCE</p>
-          </div>
-          <div class="project-cta">
-            <div class="cta-col">
-              <a href="http://www.flfloorplans.com/" target="_blank"><i class="fa fa-desktop" aria-hidden="true"></i></a>
-              <p>VIEW</p>
-            </div>
-            <div class="cta-col">
-              <a href="https://github.com/d-milisits/fl-floor-plans" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a>
-              <p>CODE</p>
-            </div>
+          <div class="overlay"></div>
+          <div class="text" id='twitter'>
+            <p>React.js Twitter Clone that utilizes Google Firebase to allow my test users to update the Tweet feed and database with one click.</p>
+            <p class="stack"><span>STACK</span></p>
+            <p class="stack-info">
+              React.js <span>||</span> CSS <span>||</span> Google Firebase
+            </p>          
           </div>
         </div>
-        <div class="project" data-aos="fade-up" data-aos-delay="100">
-          <div class="project-title">
-            <h1><span class="highlight">AACTIV</span></h1>
-            <i class="fa fa-bicycle" aria-hidden="true"></i>
+
+        <div class="site" id="card" onmouseover="fadein('jg')" onmouseout="fadeout('jg')">
+          <img src="./img/jg.PNG">
+          <div class="title">
+            <p>PHOTOS BY JONATHAN GREGGO</p>
+            <a href="#" target="_blank"><i class="fa fa-desktop" id="disabled" aria-hidden="true"></i></a>
+            <a href="https://github.com/d-milisits/photosbyjg" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a>
           </div>
-          <div class="row">
-            <p class="left-text" id="hom">DESCRIPTION</p>
-            <p class="right-text">A true fullstack application. Scraped the web for extensive workout information and allowed users to create an account, generate workouts tailored to their preferences, whilst being able to save & manage favorites to a SQLite database.</p>
-          </div>
-          <div class="row">
-            <p class="left-text">PROJECT TYPE</p>
-            <p class="right-text">PERSONAL</p>
-          </div>
-          <div class="project-cta">
-            <div class="cta-col">
-              <a href="https://youtu.be/xnNbXMzI8jw" target="_blank"><i class="fa fa-youtube" aria-hidden="true"></i></a>
-              <p>VIEW</p>
-            </div>
-            <div class="cta-col">
-              <a href="https://github.com/d-milisits/aactiv" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a>
-              <p>CODE</p>
-            </div>
+          <div class="overlay"></div>
+          <div class="text" id='jg'>
+            <p>**CURRENTLY IN PRODUCTION** Freelance project built to showcase the work of a very talented photographer. Utilized whitespace, CSS grid & simple animations for a beautiful design.</p>
+            <p class="stack"><span>STACK</span></p>
+            <p class="stack-info">
+              HTML <span>||</span> CSS <span>||</span> JavaScript
+            </p>            
           </div>
         </div>
-        <div class="project" data-aos="fade-up" data-aos-delay="100">
-          <div class="project-title">
-            <h1><span class="highlight">Photos by JG</span></h1>
-            <i class="fa fa-camera-retro" aria-hidden="true"></i>
+
+        <div class="site" id="card" onmouseover="fadein('fl')" onmouseout="fadeout('fl')">
+          <img src="./img/fl.jpg">
+          <div class="title">
+            <p>FL FLOOR PLANS</p>
+            <a href="http://www.flfloorplans.com/" target="_blank"><i class="fa fa-desktop" aria-hidden="true"></i></a>
+            <a href="https://github.com/d-milisits/fl-floor-plans" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a>
           </div>
-          <div class="row">
-            <p class="left-text" id="hom">DESCRIPTION</p>
-            <p class="right-text">**CURRENTLY IN PRODUCTION** My most recent freelance project. Utilized modern web-design practices, white space & CSS Grid for a clean, modern showcase of a very talented photographer's work.</p>
-          </div>
-          <div class="row">
-            <p class="left-text">PROJECT TYPE</p>
-            <p class="right-text">FREELANCE</p>
-          </div>
-          <div class="project-cta">
-            <div class="cta-col">
-              <i class="fa fa-desktop" aria-hidden="true"></i>
-              <p>VIEW</p>
-            </div>
-            <div class="cta-col">
-              <i class="fa fa-github" aria-hidden="true"></i>
-              <p>CODE</p>
-            </div>
+          <div class="overlay"></div>
+          <div class="text" id='fl'>
+            <p>Freelance project built to showcase floor planning work to potential clients in the state of Florida. Simple animations & a clean design led to a satisfied client.</p>
+            <p class="stack"><span>STACK</span></p>
+            <p class="stack-info">
+              HTML <span>||</span> CSS <span>||</span> JavaScript
+            </p>            
           </div>
         </div>
+
       </div>
       <!-- PROJECTS END -->
 
       <!-- FOOTER START -->
       <div class="pattern"></div>
-      <div class="footer" data-aos="fade-down">
+      <div class="footer" data-aos="fade-down" data-aos-delay="350">
         <h1>OOPS!</h1>
         <p>YOU HAVE REACHED THE END OF MY SITE.</p>
         <i class="fa fa-arrow-circle-up" aria-hidden="true" onclick="document.getElementById('main').scrollIntoView();"></i>
