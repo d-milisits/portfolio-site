@@ -6,7 +6,7 @@ function show() {
   var elements = document.getElementsByClassName('nav-option');
   // Iterate through existing nav elements, apply animation & increase animation delay by 150ms per iteration.
   for (var i in elements) {
-    seconds += .15;
+    seconds += .105;
     elements[i].style.animationDelay = `${seconds}s`;
     elements[i].className +=' animate__animated animate__flipInX';
   }

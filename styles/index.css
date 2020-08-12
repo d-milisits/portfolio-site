@@ -182,7 +182,7 @@ html {
   animation-delay: 3.95s;
   /* opacity: .85; */
 }
-.main .fa:hover {
+.main .fa:hover, #burg {
   color: #7f8fa6;
   cursor: pointer;
   transition: .2s color ease;
@@ -197,7 +197,8 @@ html {
   animation-duration: .5s;
   color: #e1b12c;
 }
-.main .fa-bars {
+#burg {
+  color: #2f3542;
   position:fixed;
   font-size: 1.75rem;
   right: 3%;
@@ -350,10 +351,14 @@ html {
   text-align: center;
   margin: 4%;
 }
-.note span {
+.note #stars {
   font-weight: 800;
   color: #d63031;
   font-size: 1.5rem;
+}
+.note #bold {
+  font-weight: 600;
+  color: #7f8fa6;
 }
 /* NOTE END */
 
@@ -504,7 +509,7 @@ html {
 .footer i {
   margin: 50px 0;
   font-size: 3.25rem;
-  cursor: pointer;
+  /* cursor: pointer; */
   transition: .25s color ease;
   color: #e1b12c;
 }
@@ -648,7 +653,7 @@ html {
   .bar-div p {
     font-size: 1.15rem;
   }
-  .main .fa-bars {
+  #burg {
     font-size: 2.65rem;
   }
   .note {
@@ -975,6 +980,10 @@ html {
   }
 }
 @media (max-width: 550px) {
+  #burg {
+    right: 6%;
+    font-size: 1.35rem;
+  }
   .footer {
     width: 85%;
   }
