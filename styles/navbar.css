@@ -58,12 +58,22 @@
   margin-left: 15px;
   color: #7f8fa6;
 }
-.nav-content p:hover {
-  color: #cbdaf1;
-  transition: .2s color ease;
+.nav-option::after {
+  content: '';
+  position: absolute;
+  top:90%;
+  left:0;
+  background-color: white;
+  height: 4.5px;
+  width: 0%;
+  margin-left: 2.5%;
+  transition: .235s width;
+}
+.nav-option:hover::after {
+  width: 100%;
 }
 .nav-content p:hover ~ i {
-  color: #e1b12c;
+  color: #ebbe1e;
   cursor: pointer;
   transition: .2s color ease;
 }
@@ -107,5 +117,8 @@
   .nav-option i {
     font-size: 1.85rem;
     margin-left:0;
+  }
+  .nav-option::after {
+    height: 3px;
   }
 }

@@ -31,7 +31,7 @@
 .box .title .block {
   width: 0%;
   height: inherit;
-  background: #e1b12c;
+  background: #ebbe1e;
   position: absolute;
   animation: mainBlock 1s cubic-bezier(.74, .06, .4, .92) forwards;
   animation-delay: .5s;
@@ -58,7 +58,7 @@
   -moz-border-radius: 50%;
   border-radius: 50%;
 
-  background: #e1b12c;
+  background: #ebbe1e;
   margin-left: 5px;
   margin-top: -10px;
   position: absolute;
@@ -78,7 +78,7 @@
 .box .role .block {
   width: 0%;
   height: inherit;
-  background: #e1b12c;
+  background: #ebbe1e;
   position: absolute;
   animation: secBlock 1s cubic-bezier(.74, .06, .4, .92) forwards;
   animation-delay: 1.5s;
@@ -145,7 +145,7 @@
     opacity: 0;
   }
   100% {
-    opacity: 0.5;
+    opacity: 1;
   }
 }
 

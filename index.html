@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Daniel Milisits | Frontend Developer</title>
+    <title>Daniel Milisits | Fullstack Developer</title>
     <script src="app.js"></script>
     <meta charset="UTF-8">
     <link rel="icon" href="./img/tablogo.PNG">
@@ -57,7 +57,7 @@
     
             <div class="role">
                 <div class="block"></div>
-                <p>Frontend Developer</p>
+                <p>Fullstack Developer</p>
             </div>
     
         </div>
@@ -83,20 +83,20 @@
             <i class="fa fa-github" aria-hidden="true"></i>
           </div>
           <div class="nav-option">
-            <p class="option"><a href="https://codepen.io/d-milisits/pens/public" target="_blank">CodePen</a></p>
-            <i class="fa fa-codepen" aria-hidden="true"></i>
-          </div>
-          <div class="nav-option">
             <p class="option"><a href="https://www.linkedin.com/in/daniel-milisits/" target="_blank">LinkedIn</a></p>
             <i class="fa fa-linkedin-square" aria-hidden="true"></i>
           </div>
           <div class="nav-option">
-            <p class="option"><a href="https://www.youtube.com/channel/UC8t-EcEO0Yur8tNWPtNJ_yg?" target="_blank">YouTube</a></p>
-            <i class="fa fa-youtube-play" aria-hidden="true"></i>
-          </div>
-          <div class="nav-option">
             <p class="option"><a href="./DM-Resume.pdf" target="_blank">Resume</a></p>
             <i class="fa fa-file-text-o" aria-hidden="true"></i>
+          </div>
+          <div class="nav-option">
+            <p class="option"><a href="https://codepen.io/d-milisits/pens/public" target="_blank">CodePen</a></p>
+            <i class="fa fa-codepen" aria-hidden="true"></i>
+          </div>
+          <div class="nav-option">
+            <p class="option"><a href="https://www.youtube.com/channel/UC8t-EcEO0Yur8tNWPtNJ_yg?" target="_blank">YouTube</a></p>
+            <i class="fa fa-youtube-play" aria-hidden="true"></i>
           </div>
         </div>
       </div>
@@ -145,17 +145,11 @@
             <p>PROFICIENCY</p>
             <h1>TECH STACK</h1>
           </div>
-          <div data-aos="fade-up" data-aos-delay="200">
+          <div>
             <div class="bar-div">
               <p>React.js</p>
               <div class="bar">
                 <div class="progress react"></div>
-              </div>
-            </div>
-            <div class="bar-div">
-              <p>HTML</p>
-              <div class="bar">
-                <div class="progress html"></div>
               </div>
             </div>
             <div class="bar-div">
@@ -199,20 +193,34 @@
         <h1>PROJECTS</h1>
       </div>
 
-      <p class="note"><span id="stars">**  </span>PLEASE NOTE: My react applications are deployed on HEROKU and may take up to 10 seconds to boot. <span id="bold">PRESS THE DESKTOP ICON TO LIVE TEST.</span></p>
+      <p class="note"><span id="stars">**  </span>PLEASE NOTE: My react applications are deployed on HEROKU and may take up to 10 seconds to boot.</p>
 
       <div class="projects" id="projects" data-aos="fade-up" data-aos-delay="300">
 
         <div class="site" id="card" onmouseover="fadein('news')" onmouseout="fadeout('news')">
           <img src="./img/news.PNG">
           <div class="title">
-            <p>REACT-NEWS</p>
-            <a href="https://react-news-dm.herokuapp.com/home" target="_blank"><i class="fa fa-desktop" aria-hidden="true"></i></a>
-            <a href="https://github.com/d-milisits/react-news-app" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a>
+            <p>REACT-NEWS <span>||</span> </p>
+            <a href="https://react-news-dm.herokuapp.com/home" target="_blank">
+              <div class="view-div low">
+                <i class="fa fa-laptop" aria-hidden="true"></i>
+                <p>DEMO</p>
+              </div>
+            </a>
+            <a href="https://github.com/d-milisits/react-news-app" target="_blank">
+              <div class="view-div">
+                <i class="fa fa-github" aria-hidden="true"></i>
+                <p>CODE</p>
+              </div>
+            </a>
           </div>
-          <div class="overlay"></div>
+          <div class="overlay">
+            <div class="circle" id="news-circle"></div>
+          </div>
           <div class="text" id='news'>
-            <p>React.js app that allows users to read daily updated U.S. news by category. Modern, fun & easy to use.</p>
+            <p>React.js app that allows users to read daily updated U.S. news by category. Modern, fun & easy to use.<br>
+              <span class="warning">* Please give the site a moment to load.</span>
+            </p>
             <p class="stack"><span>STACK</span></p>
             <p class="stack-info">
               React.js <span>||</span> CSS <span>||</span> Public U.S. news API
@@ -223,11 +231,23 @@
         <div class="site" id="card" onmouseover="fadein('twitter')" onmouseout="fadeout('twitter')">
           <img src="./img/twitter.PNG">
           <div class="title">
-            <p>REACT-TWITTER-CLONE</p>
-            <a href="https://react-twitter-clone-917ea.web.app/" target="_blank"><i class="fa fa-desktop" aria-hidden="true"></i></a>
-            <a href="https://github.com/d-milisits/react-twitter-clone" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a>
+            <p>REACT-TWITTER-CLONE <span>||</span> </p>
+            <a href="https://react-twitter-clone-917ea.web.app/" target="_blank">
+              <div class="view-div">
+                <i class="fa fa-laptop" aria-hidden="true"></i>
+                <p>DEMO</p>
+              </div>
+            </a>
+            <a href="https://github.com/d-milisits/react-twitter-clone" target="_blank">
+              <div class="view-div">
+                <i class="fa fa-github" aria-hidden="true"></i>
+                <p>CODE</p>
+              </div>
+            </a>
           </div>
-          <div class="overlay"></div>
+          <div class="overlay">
+            <div class="circle" id="twitter-circle"></div>
+          </div>
           <div class="text" id='twitter'>
             <p>React.js Twitter Clone that utilizes Google Firebase to allow my test users to update the Tweet feed and database with one click.</p>
             <p class="stack"><span>STACK</span></p>
@@ -237,19 +257,31 @@
           </div>
         </div>
 
-        <div class="site" id="card" onmouseover="fadein('jg')" onmouseout="fadeout('jg')">
-          <img src="./img/jg.PNG">
+        <div class="site" id="card" onmouseover="fadein('color')" onmouseout="fadeout('color')">
+          <img src="./img/color.PNG">
           <div class="title">
-            <p>PHOTOS BY JONATHAN GREGGO</p>
-            <a href="#" target="_blank"><i class="fa fa-desktop" id="disabled" aria-hidden="true"></i></a>
-            <a href="https://github.com/d-milisits/photosbyjg" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a>
+            <p>JS COLOR PICKER <span>||</span> </p>
+            <a href="https://d-milisits.github.io/JS-Color-Picker/index.html" target="_blank">
+              <div class="view-div">
+                <i class="fa fa-laptop" aria-hidden="true"></i>
+                <p>DEMO</p>
+              </div>
+            </a>
+            <a href="https://github.com/d-milisits/JS-Color-Picker" target="_blank">
+              <div class="view-div">
+                <i class="fa fa-github" aria-hidden="true"></i>
+                <p>CODE</p>
+              </div>
+            </a>
           </div>
-          <div class="overlay"></div>
-          <div class="text" id='jg'>
-            <p>**CURRENTLY IN PRODUCTION** Freelance project built to showcase the work of a very talented photographer. Utilized whitespace, CSS grid & simple animations for a beautiful design.</p>
+          <div class="overlay">
+            <div class="circle" id="color-circle"></div>
+          </div>
+          <div class="text" id='color'>
+            <p>Utilized the chroma.js public API to fetch and edit hex color values. Randomly generate different palettes and adjust values to your liking, then save your favorites!</p>
             <p class="stack"><span>STACK</span></p>
             <p class="stack-info">
-              HTML <span>||</span> CSS <span>||</span> JavaScript
+              JavaScript <span>||</span> HTML <span>||</span> CSS <span>||</span> chroma.js API
             </p>            
           </div>
         </div>
@@ -257,13 +289,57 @@
         <div class="site" id="card" onmouseover="fadein('fl')" onmouseout="fadeout('fl')">
           <img src="./img/fl.jpg">
           <div class="title">
-            <p>FL FLOOR PLANS</p>
-            <a href="http://www.flfloorplans.com/" target="_blank"><i class="fa fa-desktop" aria-hidden="true"></i></a>
-            <a href="https://github.com/d-milisits/fl-floor-plans" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a>
+            <p>FL FLOOR PLANS <span>||</span> </p>
+            <a href="http://www.flfloorplans.com/" target="_blank">
+              <div class="view-div">
+                <i class="fa fa-laptop" aria-hidden="true"></i>
+                <p>DEMO</p>
+              </div>
+            </a>
+            <a href="https://github.com/d-milisits/fl-floor-plans" target="_blank">
+              <div class="view-div">
+                <i class="fa fa-github" aria-hidden="true"></i>
+                <p>CODE</p>
+              </div>
+            </a>
           </div>
-          <div class="overlay"></div>
+          <div class="overlay">
+            <div class="circle" id="fl-circle"></div>
+          </div>
           <div class="text" id='fl'>
-            <p>Freelance project built to showcase floor planning work to potential clients in the state of Florida. Simple animations & a clean design led to a satisfied client.</p>
+            <p>Freelance project built to showcase floor planning work to potential clients in the state of Florida. Simple animations & a clean design led to a satisfied client.
+              <span class="warning">* Please give the site a moment to load.</span>
+            </p>
+            <p class="stack"><span>STACK</span></p>
+            <p class="stack-info">
+              HTML <span>||</span> CSS <span>||</span> JavaScript
+            </p>            
+          </div>
+        </div>
+
+        <div class="site" id="card" onmouseover="fadein('jg')" onmouseout="fadeout('jg')">
+          <img src="./img/jg.PNG">
+          <div class="title">
+            <p>PHOTOS BY JG <span>||</span> </p>
+            <a href="#" target="_blank">
+              <div class="view-div">
+                <i class="fa fa-laptop" aria-hidden="true"></i>
+                <p>DEMO</p>
+              </div>
+            </a>
+            <a href="https://github.com/d-milisits/photosbyjg" target="_blank">
+              <div class="view-div">
+                <i class="fa fa-github" aria-hidden="true"></i>
+                <p>CODE</p>
+              </div>
+            </a>
+          </div>
+          <div class="overlay">
+            <div class="circle" id="jg-circle"></div>
+          </div>
+          <div class="text" id='jg'>
+            <p>Freelance project built to showcase the work of a very talented photographer. Utilized whitespace, CSS grid & simple animations for a beautiful design.</p>
+            <span class="warning">* This site is currently in production!</span>
             <p class="stack"><span>STACK</span></p>
             <p class="stack-info">
               HTML <span>||</span> CSS <span>||</span> JavaScript
@@ -277,7 +353,7 @@
       <!-- FOOTER START -->
       <div class="pattern"></div>
       <div class="footer" data-aos="fade-down" data-aos-delay="250">
-        <h1>OOPS!</h1>
+        <h1>SORRY,</h1>
         <p>YOU HAVE REACHED THE END OF MY SITE.</p>
         <i class="fa fa-frown-o" aria-hidden="true"></i>
         <!-- <i class="fa fa-arrow-circle-up" aria-hidden="true" onclick="document.getElementById('main').scrollIntoView();"></i> -->

@@ -59,12 +59,14 @@ function showModal() {
 // Functions used for project card animations. Takes in target==id.
 function fadein(target) {
   let text = document.getElementById(target);
-  text.style.animation = '.35s transitionIn .2s';
+  let circle = document.getElementById(`${target}-circle`);
+  text.style.animation = '.35s transitionIn .065s';
   text.style.animationFillMode = 'both';
 }
 
 function fadeout(target) {
   let text = document.getElementById(target);
-  text.style.animation = '.1s transitionOut';
+  let circle = document.getElementById(`${target}-circle`);
+  text.style.animation = '.085s transitionOut';
   text.style.animationFillMode = 'both';
 }
