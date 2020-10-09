@@ -8,7 +8,7 @@
   background: #151a1f;
   z-index: 1200;
   transition: .5s ease;
-  opacity: .95;
+  opacity: .965;
 }
 /* Brings navbar into view. */
 #navbar.active {

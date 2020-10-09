@@ -10,7 +10,6 @@
     <link rel="stylesheet" type="text/css" href="./styles/navbar.css">
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="css/footer.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
@@ -48,19 +47,25 @@
 
       <!-- LOADING SCREEN START -->
       <div class="container" id="container">
-        <div class="box">
-    
+        <!-- OLD LOADING SCREEN VERSION BELOW -->
+        <!-- <div class="box">
             <div class="title">
                 <span class="block"></span>
                 <h1>Daniel Milisits<span class="dot"></span></h1>
             </div>
-    
             <div class="role">
                 <div class="block"></div>
                 <p>Fullstack Developer</p>
             </div>
-    
+        </div> -->
+        <!-- NEW LOADING SCREEN -->
+        <div class="overlay"></div>
+        <i class="fa fa-spinner"></i>
+        <div class="wait" id="wait">
+          <p>THANK YOU FOR VISITING</p>
+          <h1>One moment...</h1>
         </div>
+        <p class="link" id="link">WWW.DANMILISITS.COM</p>
       </div>
       <!-- LOADING SCREEN END -->
 
@@ -99,20 +104,21 @@
             <i class="fa fa-youtube-play" aria-hidden="true"></i>
           </div>
         </div>
+        <i class="fa fa-github" id="current" aria-hidden="true"></i>
       </div>
       <!-- NAVBAR END -->
 
       <!-- MAIN LANDING BOX START -->
-      <i class="fa fa-bars animate__animated animate__fadeIn" id="burg" aria-hidden="true" onclick="show()"></i>
+      <i class="fa fa-bars" id="burg" aria-hidden="true" onclick="show()"></i>
       <div class="main" id="main">
-        <div class="back-text animate__animated animate__fadeIn">
+        <div class="back-text">
           <h1>developer.</h1>
         </div>
         <p class="mobile-logo">DM</p>
         <div class="main-intro">
-          <p class="name animate__animated animate__fadeInUp">DANIEL MILISITS</p>
-          <h1 class="animate__animated animate__fadeInUp">Frontend Focused<br>Fullstack Developer</h1>
-          <p class="para animate__animated animate__fadeInUp">One of my greatest passions is creating beautiful UI/UX for people to enjoy. While my focus is primarily shifted towards front-end development, I consider myself well-versed in back-end programming as well.</p>
+          <p class="name">DANIEL MILISITS</p>
+          <h1>Frontend Focused<br>Fullstack Developer</h1>
+          <p class="para">One of my greatest passions is creating a smooth & engaging UI/UX for anyone to enjoy. While my focus is primarily shifted towards front-end development, I consider myself well-versed in back-end programming as well.</p>
           <p class="cta animate__animated animate__fadeInUp"><span class="left" onclick="show()">Helpful Links</span>||<span class="middle" onclick="document.getElementById('outer').scrollIntoView();">View My Work</span>||<span class="right" data-clipboard-text="daniel.milisits@outlook.com" onclick="showModal()">Contact Me</span></p>
         </div>
         <div class="main-img" >
@@ -121,7 +127,7 @@
         <div class="mobile-img">
           <img class="animate__animated animate__fadeIn" src="img/mobile-img.png"/>
         </div>
-        <i class="fa fa-angle-double-down animate__animated animate__fadeInUp" aria-hidden="true"></i>
+        <i class="fa fa-angle-double-down animate__animated animate__fadeInUp" onclick="document.getElementById('text-intro').scrollIntoView();"></i>
       </div>
       <!-- MAIN LANDING BOX END -->
 
@@ -193,9 +199,68 @@
         <h1>PROJECTS</h1>
       </div>
 
-      <p class="note"><span id="stars">**  </span>PLEASE NOTE: My react applications are deployed on HEROKU and may take up to 10 seconds to boot.</p>
+      <p class="note"><span id="stars">**  </span>PLEASE NOTE: Sites with a warning label are deployed on HEROKU and may take up to 10 seconds to boot.</p>
 
       <div class="projects" id="projects" data-aos="fade-up" data-aos-delay="300">
+
+        <div class="site" id="card" onmouseover="fadein('auth')" onmouseout="fadeout('auth')">
+          <img src="./img/reactauth.PNG">
+          <div class="title">
+            <p>REACT-AUTH <span>||</span> </p>
+            <a href="https://react-auth-eb6da.web.app/#" target="_blank">
+              <div class="view-div low">
+                <i class="fa fa-laptop" aria-hidden="true"></i>
+                <p>DEMO</p>
+              </div>
+            </a>
+            <a href="https://github.com/d-milisits/react-auth" target="_blank">
+              <div class="view-div">
+                <i class="fa fa-github" aria-hidden="true"></i>
+                <p>CODE</p>
+              </div>
+            </a>
+          </div>
+          <div class="overlay">
+            <div class="circle" id="auth-circle"></div>
+          </div>
+          <div class="text" id='auth'>
+            <p>React.js app that allows users to create an account, sign in & authenticate, all wrapped in a clean UI.
+            </p>
+            <p class="stack"><span>STACK</span></p>
+            <p class="stack-info">
+              React.js <span>||</span> CSS <span>||</span> Google Firebase
+            </p>
+          </div>
+        </div>
+
+        <div class="site" id="card" onmouseover="fadein('color')" onmouseout="fadeout('color')">
+          <img src="./img/color.PNG">
+          <div class="title">
+            <p>JS COLOR PICKER <span>||</span> </p>
+            <a href="https://d-milisits.github.io/JS-Color-Picker/index.html" target="_blank">
+              <div class="view-div">
+                <i class="fa fa-laptop" aria-hidden="true"></i>
+                <p>DEMO</p>
+              </div>
+            </a>
+            <a href="https://github.com/d-milisits/JS-Color-Picker" target="_blank">
+              <div class="view-div">
+                <i class="fa fa-github" aria-hidden="true"></i>
+                <p>CODE</p>
+              </div>
+            </a>
+          </div>
+          <div class="overlay">
+            <div class="circle" id="color-circle"></div>
+          </div>
+          <div class="text" id='color'>
+            <p>Utilized the chroma.js public API to fetch and edit hex color values. Randomly generate different palettes and adjust values to your liking, then save your favorites!</p>
+            <p class="stack"><span>STACK</span></p>
+            <p class="stack-info">
+              JavaScript <span>||</span> HTML <span>||</span> CSS <span>||</span> chroma.js API
+            </p>            
+          </div>
+        </div>
 
         <div class="site" id="card" onmouseover="fadein('news')" onmouseout="fadeout('news')">
           <img src="./img/news.PNG">
@@ -219,7 +284,6 @@
           </div>
           <div class="text" id='news'>
             <p>React.js app that allows users to read daily updated U.S. news by category. Modern, fun & easy to use.<br>
-              <span class="warning">* Please give the site a moment to load.</span>
             </p>
             <p class="stack"><span>STACK</span></p>
             <p class="stack-info">
@@ -254,35 +318,6 @@
             <p class="stack-info">
               React.js <span>||</span> CSS <span>||</span> Google Firebase
             </p>          
-          </div>
-        </div>
-
-        <div class="site" id="card" onmouseover="fadein('color')" onmouseout="fadeout('color')">
-          <img src="./img/color.PNG">
-          <div class="title">
-            <p>JS COLOR PICKER <span>||</span> </p>
-            <a href="https://d-milisits.github.io/JS-Color-Picker/index.html" target="_blank">
-              <div class="view-div">
-                <i class="fa fa-laptop" aria-hidden="true"></i>
-                <p>DEMO</p>
-              </div>
-            </a>
-            <a href="https://github.com/d-milisits/JS-Color-Picker" target="_blank">
-              <div class="view-div">
-                <i class="fa fa-github" aria-hidden="true"></i>
-                <p>CODE</p>
-              </div>
-            </a>
-          </div>
-          <div class="overlay">
-            <div class="circle" id="color-circle"></div>
-          </div>
-          <div class="text" id='color'>
-            <p>Utilized the chroma.js public API to fetch and edit hex color values. Randomly generate different palettes and adjust values to your liking, then save your favorites!</p>
-            <p class="stack"><span>STACK</span></p>
-            <p class="stack-info">
-              JavaScript <span>||</span> HTML <span>||</span> CSS <span>||</span> chroma.js API
-            </p>            
           </div>
         </div>
 
@@ -352,7 +387,7 @@
 
       <!-- FOOTER START -->
       <div class="pattern"></div>
-      <div class="footer" data-aos="fade-down" data-aos-delay="250">
+      <div class="footer">
         <h1>SORRY,</h1>
         <p>YOU HAVE REACHED THE END OF MY SITE.</p>
         <i class="fa fa-frown-o" aria-hidden="true"></i>

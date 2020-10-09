@@ -45,10 +45,6 @@ html {
   display:none;
 }
 
-/* LOADING START */
-
-/* LOADING END */
-
 /* MODAL START */
 .modal {
   width: 500px;
@@ -97,10 +93,10 @@ html {
   font-size: 11.5vw;
   letter-spacing: -1vw;
   color: #ffffff;
-  animation-delay: 3.7s;
+  /* animation-delay: 3.7s; */
 }
 .back-text h1 {
-  opacity: .275;
+  opacity: .215;
   text-shadow: 6px 15px 35px rgba(122, 122, 122, 0.375);
   -webkit-touch-callout: none; 
   -webkit-user-select: none; 
@@ -125,14 +121,18 @@ html {
   font-weight: 400;
   letter-spacing: 4px;
   margin-bottom: 20px;
-  animation-delay: 4.4s;
+  animation: slideUp;
+  animation-fill-mode: both;
+  animation-delay: 1.9s;
   animation-duration: .5s;
 }
 .main-intro h1 {
   font-weight: 800;
   font-size: 4.45rem;
   line-height: 92.5%;
-  animation-delay: 4.55s;
+  animation: slideUp;
+  animation-fill-mode: both;
+  animation-delay: 2.05s;
   animation-duration: .5s;
 }
 .main-intro .para {
@@ -143,12 +143,16 @@ html {
   font-size: 1.25rem;
   letter-spacing: 0;
   margin-bottom: 25px;
-  animation-delay: 4.8s;
+  animation: slideUp;
+  animation-fill-mode: both;
+  animation-delay: 2.3s;
   animation-duration: .5s;
 }
 .main-intro .cta {
   font-size: 1.1rem;
-  animation-delay: 5.05s;
+  animation: slideUp;
+  animation-fill-mode: both;
+  animation-delay: 2.55s;
   animation-duration: .5s;
 }
 .cta .left {
@@ -177,13 +181,14 @@ html {
   height:95%;
   position: absolute;
   bottom:0;
-  right:10%;
+  right:8.5%;
   z-index: 1000;
-  animation-delay: 3.95s;
+  animation-delay: 1.45s;
+  animation-duration: 1.85s;
   /* opacity: .85; */
 }
 .main .fa:hover, #burg {
-  color: #7f8fa6;
+  color: #1f232c;
   cursor: pointer;
   transition: .2s color ease;
 }
@@ -193,9 +198,12 @@ html {
   left: 50%;
   top: 92.5%;
   transform: translate(-50%, -50%);
-  animation-delay: 5.2s;
+  animation: slideUp;
+  animation-fill-mode: both;
+  animation-delay: 2.65s;
   animation-duration: .5s;
   color: #ebbe1e;
+  z-index:1000;
 }
 #burg {
   color: #2f3542;
@@ -204,8 +212,8 @@ html {
   right: 3%;
   top: 3%;
   z-index:1100;
-  animation-delay: 5.65s;
-  animation-duration: .5s;
+  /* animation-delay: 5.65s;
+  animation-duration: .5s; */
 }
 /* MAIN STYLING END */
 
@@ -308,10 +316,10 @@ html {
   height:100%;
   border-radius: 5px;
   background-color: #ebbe1e;
-  animation-duration: 1.3s;
+  /* animation-duration: 1.3s;
   animation-delay: 2.65s;
   animation-timing-function: ease;
-  animation-fill-mode: forwards;
+  animation-fill-mode: forwards; */
 }
 .react {width: 85%;}
 .html {width: 85%;}
@@ -1210,5 +1218,15 @@ html {
     left:4%;
     width: 93%;
     font-size: .725rem;
+  }
+}
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(22.5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }

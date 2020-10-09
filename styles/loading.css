@@ -2,18 +2,134 @@
   width: 100vw;
   height: 100vh;
   height:calc(var(--vh, 1vh) * 100);
-  background: #f1f2f6;
+  /* background: #f1f2f6; */
+  background: url(../img/loadbg.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
   font-family: 'Roboto';
   display: flex;
   justify-content: center;
   align-items: center;
   position: fixed;
+  top:0;
+  left:0;
   z-index: 10000;
+  color: #f1f2f6;
+}
+#container {
+  transition: all .45s ease-in-out;
+}
+.container .overlay {
+  height:100%;
+  width:100%;
+  background-color: #151a1f;
+  opacity: 1;
+  animation: lowerOpac;
+  animation-fill-mode: both;
+  animation-delay: .1s;
+  animation-duration: .15s;
+}
+@keyframes lowerOpac {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: .9715;
+  }
+}
+.container .wait {
+  position: absolute;
+  bottom:0;
+  left:0;
+  padding: 50px;
+  animation: slideUp;
+  animation-fill-mode: both;
+  animation-delay: .2s;
+  animation-duration: .365s;
+}
+.container i {
+  color: white;
+  font-size: 50px;
+  position: absolute;
+  opacity: .085;
+  animation: rotate .45s linear infinite;
+}
+@keyframes rotate{
+  to{ 
+    transform: rotate(360deg); 
+  }
+}
+.container .wait h1 {
+  font-size: 4rem;
+  font-weight: 900;
+}
+.container .link {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 50px;
+  animation: slideUp;
+  animation-fill-mode: both;
+  animation-delay: .2s;
+  animation-duration: .365s;
+}
+.container .wait p, .container .link {
+  font-weight: 100;
+  letter-spacing: 2.5px;
+  font-size: 1.15rem;
+}
+@media (max-width: 825px) {
+  .container .wait h1 {
+    font-size: 3rem;
+  }
+  .container .wait p, .container .link {
+    font-size: 1rem;
+  }
+}
+@media (max-width: 500px) {
+  .container .link {
+    display:none;
+  }
+  .container .wait h1 {
+    font-size: 2.25rem;
+  }
+  .container .wait p {
+    font-size: .85rem;
+  }
+  .container i {
+    font-size: 40px;
+  }
+  .container .wait {
+    padding: 30px;
+  }
+}
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(22.5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes slideOut {
+  from {
+    opacity: 1;
+    transform:translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(-22.5px);
+  }
 }
 
-.container .box {
-  /* width: 265px;
-  height: 250px; */
+
+
+/* ************** OLD LOADING SCREEN BELOW ************** */
+/* .container .box {
   position: relative;
   display: flex;
   justify-content: center;
@@ -208,4 +324,4 @@
     bottom: 10px;
     right: -11px;
   }
-}
+}  */
