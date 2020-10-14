@@ -1,8 +1,8 @@
 /* GLOBAL STYLES */
 * {
-  padding:0;
-  margin:0;
-  font-family: 'Roboto', sans-serif;
+  padding: 0;
+  margin: 0;
+  font-family: "Roboto", sans-serif;
 }
 *::selection {
   background: #dfe6e9;
@@ -22,48 +22,48 @@ html {
   scroll-behavior: smooth;
 }
 .hidden {
-  display:none;
+  display: none;
 }
 .mobile-img img {
-  height:62.5%;
+  height: 62.5%;
   position: absolute;
-  bottom:30%;
-  right:2%;
+  bottom: 30%;
+  right: 2%;
   z-index: 400;
-  animation-delay: .65s;
-  display:none;
+  animation-delay: 0.65s;
+  display: none;
 }
 .mobile-logo {
   position: absolute;
-  top:3%;
+  top: 3%;
   left: 2%;
   font-weight: 400;
   font-size: 1.05rem;
   border: 1.45px solid #2f3542;
   padding: 4px;
   border-radius: 100%;
-  display:none;
+  display: none;
 }
 
 /* MODAL START */
 .modal {
   width: 500px;
   height: 100px;
-  overflow:hidden;
+  overflow: hidden;
   background: #1f232c;
   border-radius: 10px;
-  position:fixed;
+  position: fixed;
   bottom: -300px;
-  right:20px;
+  right: 20px;
   z-index: 2000;
   transition: 1s;
 }
 .modal .content {
   padding: 20px;
   box-sizing: border-box;
-  float:left;
+  float: left;
   color: #f1f2f6;
-  letter-spacing: .75px;
+  letter-spacing: 0.75px;
 }
 .modal .content #thanks {
   font-weight: 800;
@@ -77,8 +77,8 @@ html {
 
 /* MAIN STYLING START */
 .main {
-  height:100vh;
-  max-width:100vw;
+  height: 100vh;
+  max-width: 100vw;
   /* background-color: #f1f2f6; */
   position: relative;
   overflow-y: hidden;
@@ -96,26 +96,26 @@ html {
   /* animation-delay: 3.7s; */
 }
 .back-text h1 {
-  opacity: .215;
+  opacity: 0.215;
   text-shadow: 6px 15px 35px rgba(122, 122, 122, 0.375);
-  -webkit-touch-callout: none; 
-  -webkit-user-select: none; 
-   -khtml-user-select: none; 
-     -moz-user-select: none; 
-      -ms-user-select: none;
-          user-select: none; 
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 .main-intro {
-  height:100%;
-  width:100%;
+  height: 100%;
+  width: 100%;
   z-index: 500;
-  display:flex;
+  display: flex;
   flex-direction: column;
   color: #2f3542;
   position: absolute;
   top: 46%;
-  left: 10%;
-  padding:50px;
+  left: 7.5%;
+  padding: 50px;
 }
 .main-intro .name {
   font-weight: 400;
@@ -124,7 +124,7 @@ html {
   animation: slideUp;
   animation-fill-mode: both;
   animation-delay: 1.9s;
-  animation-duration: .5s;
+  animation-duration: 0.5s;
 }
 .main-intro h1 {
   font-weight: 800;
@@ -133,7 +133,7 @@ html {
   animation: slideUp;
   animation-fill-mode: both;
   animation-delay: 2.05s;
-  animation-duration: .5s;
+  animation-duration: 0.5s;
 }
 .main-intro .para {
   color: #7f8fa6;
@@ -146,17 +146,17 @@ html {
   animation: slideUp;
   animation-fill-mode: both;
   animation-delay: 2.3s;
-  animation-duration: .5s;
+  animation-duration: 0.5s;
 }
 .main-intro .cta {
   font-size: 1.1rem;
   animation: slideUp;
   animation-fill-mode: both;
   animation-delay: 2.55s;
-  animation-duration: .5s;
+  animation-duration: 0.5s;
 }
 .cta .left {
-  margin-right:10px;
+  margin-right: 10px;
 }
 .cta .middle {
   margin: 0 10px;
@@ -167,30 +167,32 @@ html {
 .main-intro .cta span {
   font-weight: 800;
   cursor: pointer;
-  transition: .25s all ease;
+  transition: 0.25s all ease;
 }
 .main-intro .cta span:hover {
   text-decoration: underline;
 }
 .main-img {
-  height:100%;
-  width:100%;
+  height: 100%;
+  width: 100%;
   overflow: hidden;
 }
 .main-img img {
-  height:95%;
+  height: 92.5%;
   position: absolute;
-  bottom:0;
-  right:8.5%;
+  bottom: 0;
+  right: 5%;
   z-index: 1000;
   animation-delay: 1.45s;
   animation-duration: 1.85s;
+  filter: brightness(1.115);
   /* opacity: .85; */
 }
-.main .fa:hover, #burg {
+.main .fa:hover,
+#burg {
   color: #1f232c;
   cursor: pointer;
-  transition: .2s color ease;
+  transition: 0.2s color ease;
 }
 .main .fa-angle-double-down {
   position: absolute;
@@ -201,17 +203,17 @@ html {
   animation: slideUp;
   animation-fill-mode: both;
   animation-delay: 2.65s;
-  animation-duration: .5s;
+  animation-duration: 0.5s;
   color: #ebbe1e;
-  z-index:1000;
+  z-index: 1000;
 }
 #burg {
   color: #2f3542;
-  position:fixed;
+  position: fixed;
   font-size: 1.75rem;
   right: 3%;
   top: 3%;
-  z-index:1100;
+  z-index: 1100;
   /* animation-delay: 5.65s;
   animation-duration: .5s; */
 }
@@ -219,10 +221,10 @@ html {
 
 /* TEXT INTRO */
 .text-intro {
-  display:flex;
+  display: flex;
   flex-direction: column;
   justify-content: center;
-  width:100%;
+  width: 100%;
   padding: 55px 0;
   background-color: #2f3542;
   background-size: cover;
@@ -246,39 +248,40 @@ html {
   background-color: #ebbe1e;
   border: 2px solid #ebbe1e;
   width: 275px;
-  height:2px;
+  height: 2px;
   margin: 25px auto;
 }
 /* TEXT INTRO END */
 
 /* ABOUT SECTION START */
 .about {
-  display:flex;
+  display: flex;
   width: 100vw;
   justify-content: center;
   position: relative;
-  overflow:hidden;
+  overflow: hidden;
 }
 .about .geo img {
-  height:650px;
-  width:400px;
-  opacity: .5;
+  height: 650px;
+  width: 400px;
+  opacity: 0.5;
 }
-.about #left, .about #right {
+.about #left,
+.about #right {
   position: absolute;
   top: -35%;
 }
 .about #left {
-  left:0;
+  left: 0;
   transform: rotate(80deg);
 }
 .about #right {
-  right:0;
+  right: 0;
   transform: rotate(-80deg);
 }
 /* ABOUT-LEFT */
 .about-left {
-  display:flex;
+  display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -295,7 +298,7 @@ html {
   border-radius: 5px;
 }
 .bar-div p {
-  letter-spacing:1.5px;
+  letter-spacing: 1.5px;
 }
 .intro p {
   color: #7f8fa6;
@@ -313,7 +316,7 @@ html {
   margin-left: 7%;
 }
 .bar .progress {
-  height:100%;
+  height: 100%;
   border-radius: 5px;
   background-color: #ebbe1e;
   /* animation-duration: 1.3s;
@@ -321,12 +324,24 @@ html {
   animation-timing-function: ease;
   animation-fill-mode: forwards; */
 }
-.react {width: 85%;}
-.html {width: 85%;}
-.css {width: 85%;}
-.js {width: 85%;}
-.python {width: 70%;}
-.flutter {width: 65%;}
+.react {
+  width: 85%;
+}
+.html {
+  width: 85%;
+}
+.css {
+  width: 85%;
+}
+.js {
+  width: 85%;
+}
+.python {
+  width: 70%;
+}
+.flutter {
+  width: 65%;
+}
 /* ABOUT SECTION END */
 
 /* GEO PATTERN START */
@@ -334,11 +349,15 @@ html {
   height: 40vh;
   width: 100%;
   margin-bottom: 15px;
-  background: linear-gradient(to bottom, rgba(255,255,255,0) 20%,
-              rgba(255,255,255,1)), url('../img/pattern.png');
+  background: linear-gradient(
+      to bottom,
+      rgba(255, 255, 255, 0) 20%,
+      rgba(255, 255, 255, 1)
+    ),
+    url("../img/pattern.png");
   background-size: cover;
   background-repeat: no-repeat;
-  opacity: .085;
+  opacity: 0.085;
   position: relative;
 }
 .pattern .fa-angle-double-down {
@@ -372,8 +391,8 @@ html {
 
 /* PROJECT SECTION START */
 .projects {
-  width:100%;
-  display:flex;
+  width: 100%;
+  display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
@@ -383,7 +402,7 @@ html {
 /* CARD */
 .projects .site {
   height: auto;
-  width:590px;
+  width: 590px;
   position: relative;
   cursor: pointer;
   margin: 50px;
@@ -402,7 +421,7 @@ html {
   color: #2f3542;
   font-weight: 300;
   z-index: 300;
-  display:flex;
+  display: flex;
   font-size: 1.35rem;
 }
 .projects .site .title span {
@@ -412,26 +431,28 @@ html {
   color: #171a20;
   font-size: 1.35rem;
   margin-left: 15px;
-  transition: .2s color ease;
+  transition: 0.2s color ease;
 }
-.projects .site .title .fa-github, .projects .site .title .fa-laptop {
+.projects .site .title .fa-github,
+.projects .site .title .fa-laptop {
   font-size: 1.65rem;
 }
 .projects .site .view-div {
-  display:flex;
+  display: flex;
   align-items: center;
-  transition: .2s color;
+  transition: 0.2s color;
   z-index: 1000;
 }
 .projects .site .view-div p {
-  font-size: .9rem;
+  font-size: 0.9rem;
   margin-left: 10px;
 }
 .projects .site .view-div:hover {
   color: #ebbe1e;
 }
 /* FOR DISABLED PROJECT VIEWS */
-#disabled, #disabled:hover {
+#disabled,
+#disabled:hover {
   color: gray;
 }
 /* OVERLAY */
@@ -441,21 +462,21 @@ html {
   overflow: hidden;
 }
 .projects .site .overlay::after {
-  content:"";
+  content: "";
   display: inline-block;
-  position:absolute;
+  position: absolute;
   background-color: #171a20;
-  top:0;
-  left:0;
-  width:100%;
-  height:100%;
-  z-index:100;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 100;
   opacity: 0;
-  transition: .2s opacity;
+  transition: 0.2s opacity;
   overflow: hidden;
 }
 .projects .site:hover .overlay::after {
-  opacity: .965;
+  opacity: 0.965;
 }
 /* .projects .site:hover .title p {
   transition: .375s color ease;
@@ -464,13 +485,13 @@ html {
 /* TEXT */
 .projects .site .text {
   position: absolute;
-  top:12.5%;
-  left:5%;
+  top: 12.5%;
+  left: 5%;
   /* transform: translate(-50%,-50%); */
   color: white;
   z-index: 200;
   opacity: 0;
-  transition: opacity .4s;
+  transition: opacity 0.4s;
   font-weight: 200;
   width: 70%;
   font-weight: 300;
@@ -480,24 +501,24 @@ html {
 }
 .projects .site .text .warning {
   color: #d85c5c;
-  font-weight:300;
+  font-weight: 300;
 }
 .projects .site .overlay .circle {
   position: absolute;
   height: 3%;
-  width:0%;
+  width: 0%;
   background-color: #ebbe1e;
-  bottom:0%;
-  left:0%;
-  transition: width .35s;
+  bottom: 0%;
+  left: 0%;
+  transition: width 0.35s;
   z-index: 400;
 }
 .projects .site:hover .circle {
   width: 100%;
 }
-@keyframes rotate{
-  to{ 
-    transform: rotate(360deg); 
+@keyframes rotate {
+  to {
+    transform: rotate(360deg);
   }
 }
 .projects .site .text span {
@@ -536,7 +557,7 @@ html {
 .footer {
   width: 65%;
   margin: 15px auto;
-  display:flex;
+  display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -559,7 +580,7 @@ html {
   margin: 50px 0;
   font-size: 3.25rem;
   /* cursor: pointer; */
-  transition: .25s color ease;
+  transition: 0.25s color ease;
   color: #f9ca24;
 }
 .footer i:hover {
@@ -607,7 +628,7 @@ html {
     margin-bottom: 14px;
   }
   .bar-div p {
-    letter-spacing:1.5px;
+    letter-spacing: 1.5px;
   }
   .project {
     margin-bottom: 37.5px;
@@ -641,7 +662,7 @@ html {
     font-size: 1.9rem;
   }
   .project .project-cta p {
-    font-size: .9rem;
+    font-size: 0.9rem;
   }
   .footer h1 {
     font-size: 4rem;
@@ -712,7 +733,7 @@ html {
     font-size: 1.7rem;
   }
   .projects .site {
-    width:735px;
+    width: 735px;
     margin: 75px;
   }
   .projects .site .title {
@@ -725,14 +746,15 @@ html {
     font-size: 1.7rem;
     margin-left: 20px;
   }
-  .projects .site .title .fa-github, .projects .site .title .fa-laptop {
+  .projects .site .title .fa-github,
+  .projects .site .title .fa-laptop {
     font-size: 1.95rem;
   }
   .projects .site .title .view-div p {
     font-size: 1.25rem;
   }
   .projects .site .text {
-    left:5%;
+    left: 5%;
     width: 70%;
     font-size: 1.4rem;
   }
@@ -781,7 +803,7 @@ html {
     margin-bottom: 14px;
   }
   .bar-div p {
-    letter-spacing:1.5px;
+    letter-spacing: 1.5px;
   }
   .project {
     margin-bottom: 37.5px;
@@ -815,7 +837,7 @@ html {
     font-size: 1.9rem;
   }
   .project .project-cta p {
-    font-size: .9rem;
+    font-size: 0.9rem;
   }
   .footer h1 {
     font-size: 4rem;
@@ -830,7 +852,7 @@ html {
 @media (max-width: 1120px) {
   .main-intro {
     left: 3%;
-    padding-left:0;
+    padding-left: 0;
   }
   .main-img img {
     right: -5%;
@@ -846,13 +868,13 @@ html {
     display:none;
   } */
   .main-img img {
-    display:none;
+    display: none;
   }
   .mobile-img img {
-    display:block;
+    display: block;
   }
   .main-intro {
-    top:30%;
+    top: 30%;
   }
   .main-intro h1 {
     font-size: 3.8rem;
@@ -867,7 +889,7 @@ html {
 }
 @media (max-width: 790px) {
   .mobile-logo {
-    display:block;
+    display: block;
   }
   .project {
     margin-bottom: 30px;
@@ -882,14 +904,14 @@ html {
     margin-top: 22px;
   }
   .project .row .left-text {
-    font-size: .95rem;
+    font-size: 0.95rem;
   }
   .project .row .right-text {
     width: 60%;
-    font-size: .985rem;
+    font-size: 0.985rem;
   }
   .note {
-    font-size: .985rem;
+    font-size: 0.985rem;
   }
   .note span {
     font-size: 1.1rem;
@@ -901,7 +923,7 @@ html {
     font-size: 1.75rem;
   }
   .project .project-cta p {
-    font-size: .8rem;
+    font-size: 0.8rem;
   }
 }
 @media (max-width: 610px) {
@@ -913,8 +935,8 @@ html {
     height: 25vh;
   }
   .mobile-img img {
-    bottom:34%;
-    right:-10%;
+    bottom: 34%;
+    right: -10%;
   }
   .main-intro {
     top: 38%;
@@ -948,7 +970,7 @@ html {
     height: 12px;
   }
   .bar-div p {
-    letter-spacing:1px;
+    letter-spacing: 1px;
   }
   .project {
     margin-bottom: 30px;
@@ -964,15 +986,15 @@ html {
     margin-top: 27.5px;
   }
   .project .row .left-text {
-    font-size: .96rem;
+    font-size: 0.96rem;
   }
   .project .row .right-text {
     width: 55%;
-    font-size: .96rem;
+    font-size: 0.96rem;
     margin-left: 40px;
   }
   .note {
-    font-size: .96rem;
+    font-size: 0.96rem;
     margin: 8%;
     margin-top: 4%;
   }
@@ -986,11 +1008,11 @@ html {
     font-size: 1.5rem;
   }
   .project .project-cta p {
-    font-size: .75rem;
+    font-size: 0.75rem;
   }
   .footer h1 {
     font-size: 3.15rem;
-    margin-bottom:3px;
+    margin-bottom: 3px;
   }
   .footer p {
     font-size: 1.05rem;
@@ -1003,13 +1025,13 @@ html {
     height: 90px;
   }
   .modal .content #thanks {
-    font-size: .9rem;
+    font-size: 0.9rem;
   }
   .modal .content #email {
-    font-size: .75rem;
+    font-size: 0.75rem;
   }
   .projects .site {
-    width:485px;
+    width: 485px;
     margin: 45px;
   }
   .projects .site .title {
@@ -1025,8 +1047,8 @@ html {
     font-size: 1.64rem;
   }
   .projects .site .text {
-    top:12.5%;
-    left:5%;
+    top: 12.5%;
+    left: 5%;
     width: 72%;
     font-size: 1rem;
   }
@@ -1048,11 +1070,11 @@ html {
   }
   .text-intro hr {
     margin: 10px auto;
-    height:.1px;
+    height: 0.1px;
     width: 235px;
   }
   .projects .site {
-    width:400px;
+    width: 400px;
     margin: 35px;
     margin-bottom: 50px;
   }
@@ -1070,10 +1092,10 @@ html {
     margin-top: -3px;
   }
   .projects .site .text {
-    top:12.5%;
-    left:5%;
+    top: 12.5%;
+    left: 5%;
     width: 80%;
-    font-size: .9rem;
+    font-size: 0.9rem;
   }
   .projects .site .text .stack {
     margin-top: 20px;
@@ -1084,8 +1106,8 @@ html {
     height: 20vh;
   }
   .mobile-img img {
-    bottom:34%;
-    right:-21%;
+    bottom: 34%;
+    right: -21%;
   }
   .main-intro {
     left: 4%;
@@ -1108,7 +1130,7 @@ html {
     margin-bottom: 6px;
   }
   .main-intro .para {
-    font-size: .95rem;
+    font-size: 0.95rem;
     margin-top: 20px;
     width: 82.5%;
     color: #414f64;
@@ -1117,11 +1139,11 @@ html {
     font-size: 2.9rem;
   }
   .text-intro p {
-    font-size: .85rem;
+    font-size: 0.85rem;
     margin-top: 8px;
   }
   .main-intro .cta {
-    font-size: .95rem;
+    font-size: 0.95rem;
   }
   .intro p {
     font-size: 1rem;
@@ -1136,11 +1158,11 @@ html {
     margin-bottom: 8.5px;
   }
   .bar-div p {
-    letter-spacing:1px;
-    font-size: .85rem;
+    letter-spacing: 1px;
+    font-size: 0.85rem;
   }
   .note {
-    font-size: .925rem;
+    font-size: 0.925rem;
   }
   .note span {
     font-size: 1rem;
@@ -1163,13 +1185,13 @@ html {
     padding: 0px;
   }
   .modal .content #thanks {
-    font-size: .8rem;
+    font-size: 0.8rem;
   }
   .modal .content #email {
-    font-size: .65rem;
+    font-size: 0.65rem;
   }
   .projects .site {
-    width:345px;
+    width: 345px;
     margin: 27.5px;
     margin-bottom: 45px;
   }
@@ -1187,37 +1209,36 @@ html {
     font-size: 1.4rem;
   }
   .projects .site .text {
-    top:12%;
-    left:4.25%;
+    top: 12%;
+    left: 4.25%;
     width: 85%;
-    font-size: .8rem;
+    font-size: 0.8rem;
   }
-
 }
 @media (max-width: 401px) {
   .mobile-img img {
-    right:-27%;
+    right: -27%;
   }
   .projects .site {
-    width:305px;
+    width: 305px;
     margin: 25px;
   }
   .projects .site .title {
     top: -39px;
-    font-size: .9rem;
+    font-size: 0.9rem;
   }
   .projects .site .title i {
-    font-size: .95rem;
+    font-size: 0.95rem;
   }
   .projects .site .title .fa-github {
     font-size: 1.2rem;
     margin-top: -2px;
   }
   .projects .site .text {
-    top:10%;
-    left:4%;
+    top: 10%;
+    left: 4%;
     width: 93%;
-    font-size: .725rem;
+    font-size: 0.725rem;
   }
 }
 @keyframes slideUp {
