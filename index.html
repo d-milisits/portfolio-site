@@ -127,7 +127,7 @@
         <div class="mobile-img">
           <img class="animate__animated animate__fadeIn" src="img/mobile-img.png"/>
         </div>
-        <i class="fa fa-angle-double-down animate__animated animate__fadeInUp" onclick="document.getElementById('text-intro').scrollIntoView();"></i>
+        <i class="fa fa-angle-double-down animate__animated animate__fadeInUp" aria-hidden="true" onclick="document.getElementById('text-intro').scrollIntoView();"></i>
       </div>
       <!-- MAIN LANDING BOX END -->
 
@@ -220,9 +220,10 @@
               </div>
             </a>
           </div>
-          <div class="overlay">
-            <div class="circle" id="auth-circle"></div>
-          </div>
+          <a href="https://react-auth-eb6da.web.app/#" target="_blank">
+            <div class="overlay">
+              <div class="circle" id="auth-circle"></div>
+            </div>
           <div class="text" id='auth'>
             <p>React.js app that allows users to create an account, sign in & authenticate, all wrapped in a clean UI.
             </p>
@@ -231,6 +232,7 @@
               React.js <span>||</span> CSS <span>||</span> Google Firebase
             </p>
           </div>
+          </a>
         </div>
 
         <div class="site" id="card" onmouseover="fadein('color')" onmouseout="fadeout('color')">
@@ -250,16 +252,18 @@
               </div>
             </a>
           </div>
-          <div class="overlay">
-            <div class="circle" id="color-circle"></div>
-          </div>
-          <div class="text" id='color'>
-            <p>Utilized the chroma.js public API to fetch and edit hex color values. Randomly generate different palettes and adjust values to your liking, then save your favorites!</p>
-            <p class="stack"><span>STACK</span></p>
-            <p class="stack-info">
-              JavaScript <span>||</span> HTML <span>||</span> CSS <span>||</span> chroma.js API
-            </p>            
-          </div>
+          <a href="https://d-milisits.github.io/JS-Color-Picker/index.html" target="_blank">
+            <div class="overlay">
+              <div class="circle" id="color-circle"></div>
+            </div>
+            <div class="text" id='color'>
+              <p>Utilized the chroma.js public API to fetch and edit hex color values. Randomly generate different palettes and adjust values to your liking, then save your favorites!</p>
+              <p class="stack"><span>STACK</span></p>
+              <p class="stack-info">
+                JavaScript <span>||</span> HTML <span>||</span> CSS <span>||</span> chroma.js API
+              </p>            
+            </div>
+          </a>
         </div>
 
         <div class="site" id="card" onmouseover="fadein('news')" onmouseout="fadeout('news')">
@@ -279,17 +283,19 @@
               </div>
             </a>
           </div>
-          <div class="overlay">
-            <div class="circle" id="news-circle"></div>
-          </div>
-          <div class="text" id='news'>
-            <p>React.js app that allows users to read daily updated U.S. news by category. Modern, fun & easy to use.<br>
-            </p>
-            <p class="stack"><span>STACK</span></p>
-            <p class="stack-info">
-              React.js <span>||</span> CSS <span>||</span> Public U.S. news API
-            </p>
-          </div>
+          <a href="https://react-news-dm.herokuapp.com/home" target="_blank">
+            <div class="overlay">
+              <div class="circle" id="news-circle"></div>
+            </div>
+            <div class="text" id='news'>
+              <p>React.js app that utilizes a public news source API allows users to read daily updated U.S. news by category. Modern, fun & easy to use.<br>
+              </p>
+              <p class="stack"><span>STACK</span></p>
+              <p class="stack-info">
+                React.js <span>||</span> CSS <span>||</span> Public U.S. news API
+              </p>
+            </div>
+          </a>
         </div>
 
         <div class="site" id="card" onmouseover="fadein('twitter')" onmouseout="fadeout('twitter')">
@@ -309,16 +315,18 @@
               </div>
             </a>
           </div>
-          <div class="overlay">
-            <div class="circle" id="twitter-circle"></div>
-          </div>
-          <div class="text" id='twitter'>
-            <p>React.js Twitter Clone that utilizes Google Firebase to allow my test users to update the Tweet feed and database with one click.</p>
-            <p class="stack"><span>STACK</span></p>
-            <p class="stack-info">
-              React.js <span>||</span> CSS <span>||</span> Google Firebase
-            </p>          
-          </div>
+          <a href="https://react-twitter-clone-917ea.web.app/" target="_blank">
+            <div class="overlay">
+              <div class="circle" id="twitter-circle"></div>
+            </div>
+            <div class="text" id='twitter'>
+              <p>React.js Twitter Clone that utilizes Google Firebase to allow my test users to update the Tweet feed and database with one click.</p>
+              <p class="stack"><span>STACK</span></p>
+              <p class="stack-info">
+                React.js <span>||</span> CSS <span>||</span> Google Firebase
+              </p>          
+            </div>
+          </a>  
         </div>
 
         <div class="site" id="card" onmouseover="fadein('fl')" onmouseout="fadeout('fl')">
@@ -338,25 +346,27 @@
               </div>
             </a>
           </div>
-          <div class="overlay">
-            <div class="circle" id="fl-circle"></div>
-          </div>
-          <div class="text" id='fl'>
-            <p>Freelance project built to showcase floor planning work to potential clients in the state of Florida. Simple animations & a clean design led to a satisfied client.
-              <span class="warning">* Please give the site a moment to load.</span>
-            </p>
-            <p class="stack"><span>STACK</span></p>
-            <p class="stack-info">
-              HTML <span>||</span> CSS <span>||</span> JavaScript
-            </p>            
-          </div>
+          <a href="http://www.flfloorplans.com/" target="_blank">
+            <div class="overlay">
+              <div class="circle" id="fl-circle"></div>
+            </div>
+            <div class="text" id='fl'>
+              <p>Freelance project built to showcase floor planning work to potential clients in the state of Florida. Simple animations & a clean design led to a satisfied client.
+                <span class="warning">* Please give the site a moment to load.</span>
+              </p>
+              <p class="stack"><span>STACK</span></p>
+              <p class="stack-info">
+                HTML <span>||</span> CSS <span>||</span> JavaScript
+              </p>            
+            </div>
+          </a>
         </div>
 
         <div class="site" id="card" onmouseover="fadein('jg')" onmouseout="fadeout('jg')">
           <img src="./img/jg.PNG">
           <div class="title">
             <p>PHOTOS BY JG <span>||</span> </p>
-            <a href="#" target="_blank">
+            <a href="javascript:void(0)" target="_blank">
               <div class="view-div">
                 <i class="fa fa-laptop" aria-hidden="true"></i>
                 <p>DEMO</p>
